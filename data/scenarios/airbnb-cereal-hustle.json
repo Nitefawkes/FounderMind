@@ -1,0 +1,340 @@
+{
+  "id": "airbnb-cereal-hustle",
+  "title": "The Cereal Box Hustle: Airbnb's Survival Story",
+  "category": "famous-startup",
+  "difficulty": "intermediate",
+  "estimatedTime": 15,
+  "description": "It's 2008. Your air mattress rental startup has $1,000 in the bank and you're $30,000 in debt. The Democratic National Convention is coming to Denver. What do you do?",
+  "learningObjectives": [
+    "Creative problem-solving under extreme cash constraints",
+    "Finding unconventional revenue sources",
+    "Maintaining team morale during crisis",
+    "Balancing short-term survival with long-term vision"
+  ],
+  "skills": ["crisis-management", "growth-hacking", "leadership", "strategy"],
+  "backstory": "You and your co-founders started 'AirBed & Breakfast' to help people rent out air mattresses during conferences. You've had some bookings during SXSW and DNC, but growth is flat. You're running out of money fast. Most investors think your idea is crazy. You need to survive long enough to prove them wrong.",
+  "realWorldInspiration": {
+    "company": "Airbnb",
+    "founder": "Brian Chesky, Joe Gebbia, Nathan Blecharczyk",
+    "year": 2008,
+    "outcome": "The cereal boxes earned $30,000 and kept Airbnb alive. Paul Graham later cited this hustle as a key reason Y Combinator accepted them. Today Airbnb is worth $75B+"
+  },
+  "initialState": {
+    "cash": 1000,
+    "runway": 0.5,
+    "mrr": 200,
+    "userCount": 50,
+    "userGrowthRate": 5,
+    "teamSize": 3,
+    "teamMorale": 60,
+    "productQuality": 65,
+    "marketShare": 0.1,
+    "brandReputation": 40,
+    "investorConfidence": 20
+  },
+  "decisions": [
+    {
+      "id": "decision-1-survival",
+      "prompt": "Crisis Meeting: Only $1,000 Left",
+      "description": "Your bank account shows $1,000. You owe $30,000 in credit card debt. The Democratic National Convention is in 2 weeks and hotels are sold out. What's your move?",
+      "options": [
+        {
+          "id": "option-1a-cereal",
+          "label": "Sell Election-Themed Cereal Boxes",
+          "description": "Design limited edition cereal boxes: 'Obama O's' and 'Cap'n McCain's'. Sell them for $40 each to political supporters.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -500,
+                "teamMorale": -10,
+                "brandReputation": -5
+              },
+              "eventDescription": "Your team is confused. 'We're supposed to be a tech company, not a cereal company!' one co-founder protests. But you start designing anyway."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "cash": 30000,
+                "teamMorale": 40,
+                "brandReputation": 15,
+                "investorConfidence": 25
+              },
+              "eventDescription": "The cereal boxes go viral! You sell 800 boxes and make $30,000. The media loves the story. Paul Graham hears about your hustle and reaches out.",
+              "delay": 14
+            },
+            "nextDecisionId": "decision-2-yc",
+            "skillPoints": [
+              { "skill": "crisis-management", "points": 50 },
+              { "skill": "growth-hacking", "points": 40 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "This is what Airbnb actually did. It demonstrates 'do things that don't scale' mentality and creative problem-solving. The hustle impressed investors more than a polished pitch deck.",
+            "realWorldExample": "Brian Chesky still has cereal boxes in Airbnb's office as a reminder to never give up.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "Bold move! Sometimes survival requires doing things that seem off-brand. This hustle shows investors you'll do whatever it takes."
+              },
+              {
+                "advisor": "CMO",
+                "comment": "Unconventional PR gold. This story will become part of your company legend and attract media attention for years."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-1b-jobs",
+          "label": "Get Part-Time Jobs",
+          "description": "Keep building the product nights/weekends while working part-time jobs during the day.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": 2000,
+                "teamMorale": -20,
+                "productQuality": -15
+              },
+              "eventDescription": "You take freelance gigs. It pays the bills but progress on the product slows dramatically."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "cash": 8000,
+                "teamMorale": -30,
+                "productQuality": -25,
+                "userGrowthRate": -5
+              },
+              "eventDescription": "Six months later, you're still treading water. One co-founder is thinking about leaving. The window of opportunity is closing.",
+              "delay": 180
+            },
+            "nextDecisionId": "decision-3-pivot",
+            "skillPoints": [
+              { "skill": "crisis-management", "points": 20 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Playing it safe feels responsible but dilutes focus. Startups die from lack of commitment more often than lack of capital.",
+            "advisorCommentary": [
+              {
+                "advisor": "CFO",
+                "comment": "Financially conservative, but you're losing your competitive advantage: speed and focus."
+              },
+              {
+                "advisor": "Investor",
+                "comment": "I rarely invest in part-time founders. The market won't wait for you to be ready."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-1c-pivot",
+          "label": "Pivot to Event Housing Platform",
+          "description": "Forget the daily rental marketplace. Focus only on conference housing where you've seen traction.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -200,
+                "mrr": -100,
+                "userCount": -30
+              },
+              "eventDescription": "You narrow your focus to events only. Some users leave because they wanted daily rentals."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "cash": 3000,
+                "mrr": 500,
+                "userGrowthRate": 10,
+                "productQuality": 20
+              },
+              "eventDescription": "The event niche grows steadily, but you're missing the bigger vision of a global marketplace. You're building a nice small business, not a unicorn.",
+              "delay": 90
+            },
+            "skillPoints": [
+              { "skill": "strategy", "points": 25 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Pivoting to a narrower niche seems logical, but Airbnb's magic was the broad marketplace vision. Playing small limits your upside.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "Sometimes you need to think bigger, not smaller. Don't let fear make you settle for a lifestyle business when you could build something transformative."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-1d-shutdown",
+          "label": "Shut Down and Move On",
+          "description": "Accept defeat. Pay off debts and get 'real jobs' before going deeper into debt.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": 0,
+                "teamMorale": -100,
+                "userCount": -50
+              },
+              "eventDescription": "You shut down the site and email your 50 users. Some are disappointed. You feel relieved but also haunted by 'what if?'"
+            },
+            "skillPoints": []
+          },
+          "analysis": {
+            "reasoning": "Quitting is always an option, but you're giving up right before a potential breakthrough. Many successful founders had similar moments of despair.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "The darkest hour is just before dawn. Some of history's greatest companies almost died in their early days."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-2-yc",
+      "prompt": "Y Combinator Application",
+      "description": "Paul Graham heard about your cereal stunt and invited you to apply to Y Combinator. The application asks: 'What have you built that your users love?' How do you approach this?",
+      "options": [
+        {
+          "id": "option-2a-honest",
+          "label": "Be Brutally Honest",
+          "description": "Admit your current numbers are weak, but emphasize your hustle, vision, and the fact that hotels can't scale housing supply.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "investorConfidence": 30,
+                "cash": 20000
+              },
+              "eventDescription": "You get into Y Combinator! PG says: 'We invest in people who find a way to survive. You're cockroaches, and that's a compliment.'"
+            },
+            "nextDecisionId": "decision-3-growth",
+            "skillPoints": [
+              { "skill": "leadership", "points": 40 },
+              { "skill": "fundraising", "points": 35 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Honesty combined with demonstrated resourcefulness is what got Airbnb into YC. Investors bet on founders, not just metrics.",
+            "realWorldExample": "PG famously said Airbnb was the best example of determination he'd ever seen.",
+            "advisorCommentary": [
+              {
+                "advisor": "Investor",
+                "comment": "Your metrics aren't impressive, but your resourcefulness is off the charts. That's what I'm betting on."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-2b-exaggerate",
+          "label": "Exaggerate Your Traction",
+          "description": "Emphasize the conference bookings and gloss over low retention. Make it sound like you're growing faster than you are.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "investorConfidence": -20,
+                "brandReputation": -30
+              },
+              "eventDescription": "YC partners see through the embellishment. They reject your application. You've damaged your reputation in the startup community."
+            },
+            "skillPoints": []
+          },
+          "analysis": {
+            "reasoning": "Investors talk to each other. Dishonesty, even small embellishments, can blacklist you. Integrity is everything in Silicon Valley.",
+            "advisorCommentary": [
+              {
+                "advisor": "Investor",
+                "comment": "I can spot inflated metrics from a mile away. When founders aren't straight with me, I'm out."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-3-growth",
+      "prompt": "The YC Growth Strategy",
+      "description": "You're in YC with $20K funding. PG's advice: 'Go to your users.' Your users are in NYC. You're in SF. What do you do?",
+      "options": [
+        {
+          "id": "option-3a-move-nyc",
+          "label": "Move to NYC for 3 Months",
+          "description": "Temporarily relocate to NYC. Visit every single host, take professional photos, understand their problems firsthand.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -5000,
+                "productQuality": 30,
+                "userGrowthRate": 25
+              },
+              "eventDescription": "You spend weeks visiting hosts. You discover the photos are terrible - that's why bookings are low!"
+            },
+            "longTerm": {
+              "metricChanges": {
+                "mrr": 2000,
+                "userCount": 500,
+                "userGrowthRate": 50,
+                "productQuality": 40,
+                "brandReputation": 30
+              },
+              "eventDescription": "Professional photos increase bookings 2-3x. This insight becomes a core part of your service. Revenue starts growing exponentially.",
+              "delay": 90
+            },
+            "skillPoints": [
+              { "skill": "product", "points": 50 },
+              { "skill": "growth-hacking", "points": 45 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "This is what Airbnb actually did. 'Do things that don't scale' - PG's most famous advice. Manual work and deep user understanding created their breakthrough.",
+            "realWorldExample": "The professional photography insight led to a service that increased listings by 2-3x and became standard in the industry.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "Perfect execution of 'do things that don't scale.' You found the insight that changes everything."
+              },
+              {
+                "advisor": "Product",
+                "comment": "You didn't build a feature to solve the problem - you did it manually first. That's how you find product-market fit."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-3b-hire-sales",
+          "label": "Hire Remote Sales Team",
+          "description": "Use YC money to hire sales reps in NYC to call potential hosts and grow the supply side.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -15000,
+                "teamSize": 5,
+                "userGrowthRate": 10
+              },
+              "eventDescription": "Sales reps add some listings but don't understand the core problem. Growth is mediocre."
+            },
+            "skillPoints": [
+              { "skill": "operations", "points": 20 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Scaling before you understand the problem wastes money. Founders need to do unscalable things first.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "You're trying to scale before you have product-market fit. That's like pouring water into a leaky bucket."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "successCriteria": [
+    { "metric": "cash", "operator": "gte", "value": 15000 },
+    { "metric": "mrr", "operator": "gte", "value": 1500 },
+    { "metric": "userGrowthRate", "operator": "gte", "value": 30 }
+  ],
+  "rewards": {
+    "xp": 500,
+    "achievements": ["cereal-entrepreneur", "yc-accepted", "hustle-master"],
+    "unlocks": ["uber-first-ride", "stripe-first-transaction"]
+  }
+}

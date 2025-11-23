@@ -1,0 +1,369 @@
+{
+  "id": "uber-first-ride",
+  "title": "The First Ride: Uber's Launch in San Francisco",
+  "category": "famous-startup",
+  "difficulty": "beginner",
+  "estimatedTime": 12,
+  "description": "Paris, 2008. You can't get a cab on a snowy night. You have an idea: What if you could request a ride from your phone? Turn this frustration into a billion-dollar company.",
+  "learningObjectives": [
+    "Starting with a simple MVP to validate demand",
+    "Navigating regulatory challenges",
+    "Building a two-sided marketplace",
+    "Early growth tactics and city launch strategy"
+  ],
+  "skills": ["product", "strategy", "growth-hacking", "operations"],
+  "backstory": "Travis Kalanick and Garrett Camp couldn't get a taxi in Paris and thought 'there should be an app for that.' They built a simple prototype: Black car service on-demand in SF. No taxi medallions, no yellow cabs - just luxury cars you can request from your iPhone.",
+  "realWorldInspiration": {
+    "company": "Uber",
+    "founder": "Travis Kalanick & Garrett Camp",
+    "year": 2010,
+    "outcome": "Started as 'UberCab' in SF with 3 cars. Grew to 150+ countries. Peak valuation: $82B. Transformed urban transportation globally."
+  },
+  "initialState": {
+    "cash": 200000,
+    "runway": 12,
+    "mrr": 0,
+    "userCount": 0,
+    "userGrowthRate": 0,
+    "teamSize": 4,
+    "teamMorale": 85,
+    "productQuality": 70,
+    "marketShare": 0,
+    "brandReputation": 30,
+    "investorConfidence": 60
+  },
+  "decisions": [
+    {
+      "id": "decision-1-mvp",
+      "prompt": "MVP Decision: What to Build First?",
+      "description": "You have $200K seed funding. You could build a full taxi-hailing platform or start simpler. What's your MVP?",
+      "options": [
+        {
+          "id": "option-1a-black-cars",
+          "label": "Premium Black Car Service Only",
+          "description": "Partner with existing black car companies. Focus on reliability and luxury. iPhone app only. Launch in SF first.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -50000,
+                "productQuality": 20
+              },
+              "eventDescription": "You build a simple app and partner with 3 black car companies. Your first drivers are professional chauffeurs. The app works, but it's expensive - $50+ per ride."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "mrr": 5000,
+                "userCount": 200,
+                "userGrowthRate": 50,
+                "brandReputation": 30
+              },
+              "eventDescription": "Early adopters love it! Tech workers and executives use it regularly. Word spreads in SF tech community. It's working!",
+              "delay": 60
+            },
+            "nextDecisionId": "decision-2-regulatory",
+            "skillPoints": [
+              { "skill": "product", "points": 45 },
+              { "skill": "strategy", "points": 40 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "This is what Uber actually did. Starting premium allowed them to avoid immediate regulatory fights while proving demand. Once validated, they expanded down-market.",
+            "realWorldExample": "Uber started as 'UberCab' with only black cars. The premium positioning helped them build a quality reputation before scaling.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "Smart! Start with a narrow, high-quality experience. Prove the concept works before dealing with regulatory complexity."
+              },
+              {
+                "advisor": "Product",
+                "comment": "Premium users are more forgiving of bugs and willing to pay for convenience. Perfect for MVP testing."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-1b-full-platform",
+          "label": "Build Full Taxi-Hailing Platform",
+          "description": "Create a comprehensive platform connecting riders with all types of drivers - taxis, black cars, and regular people.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -150000,
+                "productQuality": -10,
+                "teamMorale": -15
+              },
+              "eventDescription": "Building a full platform takes 9 months. By the time you launch, you're running low on cash and competitors are emerging."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "cash": -50000,
+                "runway": 3,
+                "userCount": 50,
+                "userGrowthRate": 10
+              },
+              "eventDescription": "The platform is complex and buggy. Taxi companies refuse to participate. You're running out of runway.",
+              "delay": 270
+            },
+            "skillPoints": [
+              { "skill": "technical", "points": 25 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Overbuilding the MVP wastes time and money. Ship fast, learn fast. Complexity can be added later once you've proven the core concept.",
+            "advisorCommentary": [
+              {
+                "advisor": "CTO",
+                "comment": "You're building for a future that might not exist. Start simple, validate, then scale complexity."
+              },
+              {
+                "advisor": "CFO",
+                "comment": "You've burned 75% of your runway before getting any market feedback. That's dangerous."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-1c-uber-for-bikes",
+          "label": "Start with Bike Messengers",
+          "description": "Even simpler MVP: On-demand bike messengers for deliveries. Lower regulatory risk, faster to market.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -20000,
+                "productQuality": 15,
+                "mrr": 1000
+              },
+              "eventDescription": "You launch quickly with 10 bike messengers. Local businesses use it for quick deliveries."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "mrr": 3000,
+                "userCount": 100,
+                "userGrowthRate": 15
+              },
+              "eventDescription": "It's a nice business, but the market is too small. You're building a feature, not a platform that can scale globally.",
+              "delay": 180
+            },
+            "skillPoints": [
+              { "skill": "operations", "points": 30 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Starting too small limits your vision. While this is lower risk, it misses the massive transportation market opportunity.",
+            "advisorCommentary": [
+              {
+                "advisor": "Investor",
+                "comment": "I invest in billion-dollar opportunities. Bike messengers is a lifestyle business, not a venture-scale company."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-2-regulatory",
+      "prompt": "Cease and Desist from SF",
+      "description": "The SF Metro Transit Authority sends you a cease and desist letter. You're operating an unlicensed taxi service. Your lawyer says you could face fines. What do you do?",
+      "options": [
+        {
+          "id": "option-2a-rebrand",
+          "label": "Rebrand and Continue Operating",
+          "description": "Drop 'Cab' from the name, become just 'Uber.' Argue you're a tech company, not a taxi company. Keep operating.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "brandReputation": 20,
+                "cash": -10000
+              },
+              "eventDescription": "You rename to 'Uber' and hire lawyers. The distinction helps: you're a technology platform, not a taxi operator."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "userCount": 500,
+                "mrr": 15000,
+                "userGrowthRate": 75,
+                "marketShare": 15
+              },
+              "eventDescription": "The rebrand works! Regulators are confused about how to classify you. Meanwhile, you keep growing. Users love the service and defend you on social media.",
+              "delay": 90
+            },
+            "nextDecisionId": "decision-3-expansion",
+            "skillPoints": [
+              { "skill": "strategy", "points": 50 },
+              { "skill": "crisis-management", "points": 45 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "This is what Uber actually did. Sometimes you need to ask forgiveness, not permission. The rebrand helped create legal gray area that bought them time to build user base.",
+            "realWorldExample": "Uber's 'move fast and ask forgiveness later' approach became legendary. By the time regulations caught up, they had millions of loyal users.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "Classic disruptor move. If you waited for permission, you'd never launch. Build the user base, then negotiate from strength."
+              },
+              {
+                "advisor": "Investor",
+                "comment": "Regulatory arbitrage is risky but can create massive value. Just make sure you have legal counsel and war chest."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-2b-apply-license",
+          "label": "Apply for Taxi License",
+          "description": "Work within the system. Apply for proper taxi licenses and medallions. Play by the existing rules.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -50000,
+                "userGrowthRate": -40
+              },
+              "eventDescription": "You apply for licenses. The process takes 18 months and costs a fortune. Your competitors launch and grab market share."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "cash": -100000,
+                "userCount": -150,
+                "marketShare": -10,
+                "teamMorale": -40
+              },
+              "eventDescription": "By the time you get licenses, competitors who ignored regulations have won the market. You're compliant but irrelevant.",
+              "delay": 540
+            },
+            "skillPoints": [
+              { "skill": "operations", "points": 15 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Sometimes following old rules designed for a different era kills innovation. Incumbents use regulations as moats - disruptors need to challenge them.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "You just let the taxi cartel's regulatory capture kill your startup. First-mover advantage matters."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-2c-shutdown",
+          "label": "Shut Down San Francisco Operations",
+          "description": "Too risky. Shut down in SF and pivot to cities with friendlier regulations.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "userCount": -200,
+                "mrr": -5000,
+                "teamMorale": -30,
+                "brandReputation": -25
+              },
+              "eventDescription": "You retreat from SF. Your early adopters are disappointed. Team morale tanks. Investors question your commitment."
+            },
+            "skillPoints": []
+          },
+          "analysis": {
+            "reasoning": "Retreating from your home market signals weakness. If you can't win in SF, how will you compete globally?",
+            "advisorCommentary": [
+              {
+                "advisor": "Investor",
+                "comment": "You gave up at the first sign of resistance. Startups face harder battles than this."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-3-expansion",
+      "prompt": "City Expansion Strategy",
+      "description": "You're successful in SF with 5,000 active users. You have funding to expand to 3 more cities. Which markets do you prioritize?",
+      "options": [
+        {
+          "id": "option-3a-big-markets",
+          "label": "Go Big: NYC, LA, Chicago",
+          "description": "Attack the largest markets first. High competition, high regulatory risk, but massive TAM.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -80000,
+                "teamSize": 15,
+                "marketShare": 5
+              },
+              "eventDescription": "You launch in all three cities simultaneously. It's chaotic but exciting. Each city requires custom regulatory strategy."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "userCount": 50000,
+                "mrr": 150000,
+                "userGrowthRate": 100,
+                "marketShare": 25,
+                "brandReputation": 50
+              },
+              "eventDescription": "The big city launches succeed! You become a national story. Network effects kick in - business travelers use you everywhere.",
+              "delay": 180
+            },
+            "skillPoints": [
+              { "skill": "growth-hacking", "points": 60 },
+              { "skill": "operations", "points": 50 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Uber's actual strategy: launch in major markets to build national brand and network effects quickly. Higher risk but faster path to dominance.",
+            "realWorldExample": "Uber's aggressive expansion into major cities created FOMO and network effects. Being everywhere made them the default choice.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "Speed is a weapon. Saturate major markets before competitors can react. Winner-takes-most in platform businesses."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-3b-friendly-markets",
+          "label": "Start Easy: Austin, Portland, Seattle",
+          "description": "Choose tech-friendly, regulation-light cities first. Build momentum before tackling harder markets.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -40000,
+                "teamSize": 8,
+                "marketShare": 15
+              },
+              "eventDescription": "Smooth launches in friendly cities. You dominate quickly with little resistance."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "userCount": 15000,
+                "mrr": 45000,
+                "userGrowthRate": 40
+              },
+              "eventDescription": "You're successful in medium cities, but competitors are winning NYC and LA. You're becoming a regional player, not a category leader.",
+              "delay": 180
+            },
+            "skillPoints": [
+              { "skill": "operations", "points": 35 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Playing it safe lets aggressive competitors take the valuable markets. In winner-takes-most markets, second place is first loser.",
+            "advisorCommentary": [
+              {
+                "advisor": "Investor",
+                "comment": "You optimized for easy wins instead of strategic positioning. Now you're playing catch-up in the markets that matter."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "successCriteria": [
+    { "metric": "cash", "operator": "gte", "value": 50000 },
+    { "metric": "userCount", "operator": "gte", "value": 30000 },
+    { "metric": "marketShare", "operator": "gte", "value": 20 }
+  ],
+  "rewards": {
+    "xp": 400,
+    "achievements": ["disruptor", "regulatory-rebel", "first-mover"],
+    "unlocks": ["stripe-first-transaction", "doordash-delivery-crisis"]
+  }
+}

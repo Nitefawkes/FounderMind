@@ -9,6 +9,7 @@ export function Navigation() {
   const navItems = [
     { href: '/', label: 'Home', icon: '🏠' },
     { href: '/dashboard', label: 'Dashboard', icon: '📊' },
+    { href: '/scenarios', label: 'Scenarios', icon: '📚' },
     { href: '/advisors', label: 'Advisors', icon: '🧠' },
     { href: '/compete', label: 'Compete', icon: '⚔️' },
     { href: '/profile', label: 'Profile', icon: '👤' },

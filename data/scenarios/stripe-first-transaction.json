@@ -1,0 +1,355 @@
+{
+  "id": "stripe-first-transaction",
+  "title": "Seven Lines of Code: Stripe's Developer-First Revolution",
+  "category": "famous-startup",
+  "difficulty": "intermediate",
+  "estimatedTime": 15,
+  "description": "Payment integration takes weeks and requires talking to salespeople. You believe it should take 7 lines of code. Build the payment infrastructure for the internet.",
+  "learningObjectives": [
+    "Building for developers as customers",
+    "Product-led growth strategy",
+    "Solving painful integration problems",
+    "Creating a platform vs a product"
+  ],
+  "skills": ["product", "technical", "strategy", "marketing"],
+  "backstory": "Patrick and John Collison tried to accept payments for their startups and were shocked by how terrible the experience was. PayPal took 2 weeks to activate accounts. Traditional payment processors required talking to sales reps, signing contracts, and weeks of integration. They thought: this should be as easy as any other API.",
+  "realWorldInspiration": {
+    "company": "Stripe",
+    "founder": "Patrick Collison & John Collison",
+    "year": 2010,
+    "outcome": "Started with '/v1/charges' API endpoint. Now processes $640B+ annually. Valued at $95B. Powers millions of businesses globally."
+  },
+  "initialState": {
+    "cash": 2000000,
+    "runway": 24,
+    "mrr": 0,
+    "userCount": 0,
+    "userGrowthRate": 0,
+    "teamSize": 5,
+    "teamMorale": 90,
+    "productQuality": 80,
+    "marketShare": 0,
+    "brandReputation": 25,
+    "investorConfidence": 75
+  },
+  "decisions": [
+    {
+      "id": "decision-1-customer",
+      "prompt": "Who's Your Customer?",
+      "description": "You're building payment infrastructure. Who should you optimize for: developers, businesses, or merchants?",
+      "options": [
+        {
+          "id": "option-1a-developers",
+          "label": "Build for Developers First",
+          "description": "Create the best API developers have ever used. Make integration take minutes, not weeks. Perfect documentation. No sales calls required.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -200000,
+                "productQuality": 30
+              },
+              "eventDescription": "You obsess over API design. Every error message is helpful. Docs include code samples for 8 languages. Stripe.js makes PCI compliance invisible."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "userCount": 1000,
+                "mrr": 50000,
+                "userGrowthRate": 100,
+                "brandReputation": 45
+              },
+              "eventDescription": "Developers love you! They're integrating Stripe in their side projects, then bringing it to their day jobs. Word spreads on Hacker News.",
+              "delay": 90
+            },
+            "nextDecisionId": "decision-2-experience",
+            "skillPoints": [
+              { "skill": "product", "points": 60 },
+              { "skill": "technical", "points": 55 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Stripe's secret: developers are the decision makers at tech companies. Win them, and they'll pull your product into their companies. Product-led growth.",
+            "realWorldExample": "Stripe's documentation became legendary. Developers would integrate Stripe just to learn good API design.",
+            "advisorCommentary": [
+              {
+                "advisor": "Product",
+                "comment": "Developer experience is your moat. If integration takes 10 minutes instead of 2 weeks, you win by default."
+              },
+              {
+                "advisor": "CMO",
+                "comment": "Developers are vocal influencers. Make them love you and they'll be your unpaid marketing army."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-1b-enterprise",
+          "label": "Target Enterprise Businesses",
+          "description": "Go after big companies with enterprise sales. They have money and need payment processing.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -500000,
+                "teamSize": 10
+              },
+              "eventDescription": "You hire enterprise sales reps. Sales cycles are 9-18 months. You're building custom features for each prospect."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "cash": -300000,
+                "mrr": 20000,
+                "userCount": 5,
+                "userGrowthRate": 5
+              },
+              "eventDescription": "You land a few enterprise deals, but it's slow and capital-intensive. Your product is becoming bloated with custom features.",
+              "delay": 270
+            },
+            "skillPoints": [
+              { "skill": "operations", "points": 25 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Enterprise sales is slow and expensive. Meanwhile, developer-focused competitors are growing exponentially through word-of-mouth.",
+            "advisorCommentary": [
+              {
+                "advisor": "CFO",
+                "comment": "Enterprise sales burns cash fast. If one deal falls through, your metrics crater."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-1c-smb-merchants",
+          "label": "Focus on Small Merchants",
+          "description": "Build a Square-like experience for physical retail. Card readers, POS systems, easy onboarding.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -400000,
+                "productQuality": -10
+              },
+              "eventDescription": "You're competing with Square in a crowded market. Hardware is expensive. Support costs are high."
+            },
+            "skillPoints": [
+              { "skill": "operations", "points": 20 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Physical retail is a different business - lower margins, higher support costs, commodity market. You're missing the internet commerce opportunity.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "You're playing someone else's game. Square already won physical retail. What's your unique advantage?"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-2-experience",
+      "prompt": "The Integration Experience",
+      "description": "A developer wants to integrate Stripe. Current payment processors require: 1) Sales call, 2) Paperwork, 3) 2-week review, 4) Complex integration. What's your approach?",
+      "options": [
+        {
+          "id": "option-2a-instant",
+          "label": "Instant Signup, Live in Minutes",
+          "description": "Sign up with email. Get API keys instantly. Make first test transaction in 7 lines of code. No sales calls. Ever.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "userCount": 500,
+                "userGrowthRate": 150,
+                "brandReputation": 40
+              },
+              "eventDescription": "Developers are shocked. 'Wait, that's it?' They integrate Stripe into hackathon projects. Screenshots of your simple API go viral."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "userCount": 5000,
+                "mrr": 200000,
+                "userGrowthRate": 200,
+                "brandReputation": 60,
+                "marketShare": 15
+              },
+              "eventDescription": "Word spreads like wildfire. YC startups all use Stripe. Then they grow and bring Stripe with them. Viral growth loop established.",
+              "delay": 120
+            },
+            "nextDecisionId": "decision-3-fraud",
+            "skillPoints": [
+              { "skill": "product", "points": 70 },
+              { "skill": "growth-hacking", "points": 65 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "This is Stripe's breakthrough innovation. Removing friction from signup creates viral adoption. The best product is the easiest to try.",
+            "realWorldExample": "Stripe.js library became the gold standard. Developers integrated it 'just to try' and never switched back.",
+            "advisorCommentary": [
+              {
+                "advisor": "Product",
+                "comment": "You've eliminated every excuse not to try your product. That's how you create exponential growth."
+              },
+              {
+                "advisor": "CEO",
+                "comment": "Perfect product-led growth. Users activate themselves. Your CAC is near zero."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-2b-vetting",
+          "label": "Quick Vetting Process (48 hours)",
+          "description": "Require basic business info, run quick checks, approve in 48 hours. Balanced approach between speed and safety.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "userCount": 100,
+                "userGrowthRate": 40
+              },
+              "eventDescription": "The vetting slows adoption. Developers who want to integrate right now go to competitors with instant signup."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "userCount": 800,
+                "mrr": 35000,
+                "userGrowthRate": 50
+              },
+              "eventDescription": "You have fewer fraud issues, but you're losing the viral growth race. Developers talk about your competitor, not you.",
+              "delay": 120
+            },
+            "skillPoints": [
+              { "skill": "operations", "points": 30 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Every hour of friction kills conversion. In developer tools, the faster path wins. Handle fraud with technology, not process.",
+            "advisorCommentary": [
+              {
+                "advisor": "Product",
+                "comment": "You're letting fear of fraud slow your growth. Build better fraud detection instead of adding friction."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-3-fraud",
+      "prompt": "Fraud Detection Crisis",
+      "description": "Instant signup is working great, but you're seeing fraud. $50K in fraudulent transactions last month. Investors are worried. What do you do?",
+      "options": [
+        {
+          "id": "option-3a-ml-first",
+          "label": "Build ML-Powered Fraud Detection",
+          "description": "Invest heavily in machine learning. Detect fraud algorithmically without slowing signups. Make it a product advantage.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -300000,
+                "teamSize": 8
+              },
+              "eventDescription": "You hire ML engineers and build Radar - a fraud detection system. Initial results are promising."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "productQuality": 50,
+                "brandReputation": 40,
+                "marketShare": 25,
+                "mrr": 400000
+              },
+              "eventDescription": "Radar becomes industry-leading. You're blocking fraud better than anyone while maintaining instant signup. It becomes a selling point.",
+              "delay": 180
+            },
+            "skillPoints": [
+              { "skill": "technical", "points": 70 },
+              { "skill": "product", "points": 60 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Stripe's actual approach: turn fraud prevention into a competitive advantage. Radar became a product that merchants would pay extra for.",
+            "realWorldExample": "Stripe Radar now blocks billions in fraud annually using ML. It's a major product offering, not just a cost center.",
+            "advisorCommentary": [
+              {
+                "advisor": "CTO",
+                "comment": "Perfect technical solution. You're solving the problem at scale, not adding process bandaids."
+              },
+              {
+                "advisor": "Product",
+                "comment": "You turned a problem into a feature. That's product thinking at its best."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-3b-manual-review",
+          "label": "Add Manual Review Process",
+          "description": "Review all new accounts manually. Flag suspicious patterns. Slower but safer.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "cash": -100000,
+                "teamSize": 5,
+                "userGrowthRate": -60
+              },
+              "eventDescription": "You hire reviewers. Fraud decreases but signup time goes to 24-48 hours. Growth slows dramatically."
+            },
+            "longTerm": {
+              "metricChanges": {
+                "userGrowthRate": -80,
+                "marketShare": -10,
+                "brandReputation": -20
+              },
+              "eventDescription": "You've lost your main advantage: instant signup. Developers complain. Competitors with better tech are winning.",
+              "delay": 90
+            },
+            "skillPoints": [
+              { "skill": "operations", "points": 20 }
+            ]
+          },
+          "analysis": {
+            "reasoning": "Manual processes don't scale. You're sacrificing your competitive advantage (speed) for a short-term fix.",
+            "advisorCommentary": [
+              {
+                "advisor": "CEO",
+                "comment": "You just killed the golden goose. Your differentiation was instant signup. Now you're just another payment processor."
+              }
+            ]
+          }
+        },
+        {
+          "id": "option-3c-restrict-access",
+          "label": "Require Business Verification",
+          "description": "Make users verify their business before going live. EIN numbers, business licenses, etc.",
+          "outcomes": {
+            "immediate": {
+              "metricChanges": {
+                "userGrowthRate": -100,
+                "brandReputation": -30
+              },
+              "eventDescription": "Growth grinds to a halt. Developers trying to build side projects can't use you. You're now optimized for established businesses only."
+            },
+            "skillPoints": []
+          },
+          "analysis": {
+            "reasoning": "You just became the enemy you set out to disrupt. Verification requirements kill the 'seven lines of code' promise.",
+            "advisorCommentary": [
+              {
+                "advisor": "Product",
+                "comment": "You let fear turn you into the thing you were disrupting. Your users wanted simplicity, you gave them complexity."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "successCriteria": [
+    { "metric": "userCount", "operator": "gte", "value": 3000 },
+    { "metric": "mrr", "operator": "gte", "value": 150000 },
+    { "metric": "userGrowthRate", "operator": "gte", "value": 100 }
+  ],
+  "rewards": {
+    "xp": 550,
+    "achievements": ["developer-first", "api-master", "platform-builder"],
+    "unlocks": ["slack-enterprise-pivot", "notion-viral-growth"]
+  }
+}
