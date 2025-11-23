@@ -26,12 +26,15 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="flex gap-4 justify-center items-center pt-8">
-            <Link href="/register" className="cyber-button text-lg">
-              Start Your Startup →
+            <Link href="/dashboard" className="cyber-button text-lg">
+              Try Demo →
+            </Link>
+            <Link href="/advisors" className="border border-neon-pink text-neon-pink px-6 py-3 rounded hover:bg-neon-pink/10 transition-all duration-300">
+              Meet Advisors
             </Link>
             <Link
               href="/login"
-              className="border border-neon-pink text-neon-pink px-6 py-3 rounded hover:bg-neon-pink/10 transition-all duration-300"
+              className="border border-neon-blue text-neon-blue px-6 py-3 rounded hover:bg-neon-blue/10 transition-all duration-300"
             >
               Login
             </Link>

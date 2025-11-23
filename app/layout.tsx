@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { Navigation } from '@/components/ui/Navigation'
 
 export const metadata: Metadata = {
   title: 'FounderMind - AI-Powered Startup Simulation',
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body>
+        <Navigation />
         {children}
       </body>
     </html>
