@@ -12,6 +12,7 @@ export function Navigation() {
     { href: '/scenarios', label: 'Scenarios', icon: '📚' },
     { href: '/advisors', label: 'Advisors', icon: '🧠' },
     { href: '/compete', label: 'Compete', icon: '⚔️' },
+    { href: '/shop', label: 'Shop', icon: '🛒' },
     { href: '/profile', label: 'Profile', icon: '👤' },
   ]
 
