@@ -10,10 +10,8 @@ export function Navigation() {
     { href: '/', label: 'Home', icon: '🏠' },
     { href: '/dashboard', label: 'Dashboard', icon: '📊' },
     { href: '/advisors', label: 'Advisors', icon: '🧠' },
-    { href: '/simulation', label: 'Simulation', icon: '🎮' },
-    { href: '/market', label: 'Market', icon: '📈' },
-    { href: '/team', label: 'Team', icon: '👥' },
-    { href: '/finances', label: 'Finances', icon: '💰' },
+    { href: '/compete', label: 'Compete', icon: '⚔️' },
+    { href: '/profile', label: 'Profile', icon: '👤' },
   ]
 
   // Don't show nav on home/login/register pages
