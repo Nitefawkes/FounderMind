@@ -5,6 +5,7 @@ import { MetricCard } from '@/components/ui/MetricCard'
 import { Button } from '@/components/ui/Button'
 import { EventLog } from '@/components/ui/EventLog'
 import { StartupSimulator } from '@/lib/simulation/StartupSimulator'
+import DailyChallengePanel from '@/components/challenges/DailyChallengePanel'
 
 export default function DashboardPage() {
   const [simulator, setSimulator] = useState<StartupSimulator | null>(null)
@@ -81,7 +82,11 @@ export default function DashboardPage() {
         <Button onClick={handleStop} variant="danger">Stop</Button>
       </div>
 
-      {/* Metrics Grid */}
+      {/* Two Column Layout: Main Content + Daily Challenges */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+        {/* Main Content - 2/3 width */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* Metrics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <MetricCard
           label="Current Capital"
@@ -158,42 +163,49 @@ export default function DashboardPage() {
         />
       </div>
 
-      {/* Event Log */}
-      <EventLog events={state.eventHistory} />
+          {/* Event Log */}
+          <EventLog events={state.eventHistory} />
 
-      {/* Market Info */}
-      <div className="mt-8 cyber-card">
-        <h3 className="text-xl font-bold text-neon-blue mb-4">Market Conditions</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-          <div>
-            <p className="text-gray-400">Market Size</p>
-            <p className="text-white font-semibold">${(state.market.market_size / 1000000000).toFixed(1)}B</p>
-          </div>
-          <div>
-            <p className="text-gray-400">Growth Rate</p>
-            <p className="text-white font-semibold">{state.market.growth_rate.toFixed(1)}%</p>
-          </div>
-          <div>
-            <p className="text-gray-400">Competition</p>
-            <p className="text-white font-semibold">{state.market.competition_level.toFixed(0)}/100</p>
-          </div>
-          <div>
-            <p className="text-gray-400">Economic Cycle</p>
-            <p className="text-white font-semibold capitalize">{state.market.economic_cycle}</p>
+          {/* Market Info */}
+          <div className="cyber-card">
+            <h3 className="text-xl font-bold text-neon-blue mb-4">Market Conditions</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+              <div>
+                <p className="text-gray-400">Market Size</p>
+                <p className="text-white font-semibold">${(state.market.market_size / 1000000000).toFixed(1)}B</p>
+              </div>
+              <div>
+                <p className="text-gray-400">Growth Rate</p>
+                <p className="text-white font-semibold">{state.market.growth_rate.toFixed(1)}%</p>
+              </div>
+              <div>
+                <p className="text-gray-400">Competition</p>
+                <p className="text-white font-semibold">{state.market.competition_level.toFixed(0)}/100</p>
+              </div>
+              <div>
+                <p className="text-gray-400">Economic Cycle</p>
+                <p className="text-white font-semibold capitalize">{state.market.economic_cycle}</p>
+              </div>
+            </div>
+            <div className="mt-4">
+              <p className="text-gray-400 mb-2">Trends</p>
+              <div className="flex flex-wrap gap-2">
+                {state.market.trends.map((trend: string) => (
+                  <span
+                    key={trend}
+                    className="px-3 py-1 bg-cyber-gray border border-neon-blue/30 rounded-full text-sm text-neon-blue"
+                  >
+                    {trend}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-        <div className="mt-4">
-          <p className="text-gray-400 mb-2">Trends</p>
-          <div className="flex flex-wrap gap-2">
-            {state.market.trends.map((trend: string) => (
-              <span
-                key={trend}
-                className="px-3 py-1 bg-cyber-gray border border-neon-blue/30 rounded-full text-sm text-neon-blue"
-              >
-                {trend}
-              </span>
-            ))}
-          </div>
+
+        {/* Daily Challenges Sidebar - 1/3 width */}
+        <div className="lg:col-span-1">
+          <DailyChallengePanel />
         </div>
       </div>
     </div>
